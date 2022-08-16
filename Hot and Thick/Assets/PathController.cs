@@ -8,6 +8,17 @@ public class PathController : MonoBehaviour
     [SerializeField] private List<Transform> wayPoint = new List<Transform>();
     private NavMeshAgent navMeshAgent;
     private int wayPointIndex;
+    private bool playerDetect;
+
+    private void OnEnable()
+    {
+        Detector.onDetect +=  ()=> playerDetect = true;
+    }
+
+    private void OnDisable()
+    {
+        Detector.onDetect -= () => playerDetect = true;
+    }
 
     private void Start()
     {
@@ -18,6 +29,12 @@ public class PathController : MonoBehaviour
 
     private void Update()
     {
+        if (playerDetect)
+        {
+            navMeshAgent.destination = GameObject.FindGameObjectWithTag("Player").transform.position;
+            return;
+        }
+
         if(navMeshAgent.remainingDistance <= 0.5f)
         {
             wayPointIndex++;
@@ -31,7 +48,6 @@ public class PathController : MonoBehaviour
             {
                 navMeshAgent.destination = wayPoint[wayPointIndex].position;
             }
-            
         }
     }
 

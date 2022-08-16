@@ -13,9 +13,25 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    [SerializeField] private float cameraZoomSpeed;
+    private float _camZoomSpeed;
 
     Vector3 velocity;
     bool isGrounded;
+
+    private void Start()
+    {
+        _camZoomSpeed = cameraZoomSpeed;
+        cameraZoomSpeed = 1;
+        GhostCamera.onCamOn += () => cameraZoomSpeed = _camZoomSpeed;
+        GhostCamera.onCamOff += () => cameraZoomSpeed = 1;
+    }
+
+    private void OnDisable()
+    {
+        GhostCamera.onCamOn -= () => cameraZoomSpeed = _camZoomSpeed;
+        GhostCamera.onCamOff -= () => cameraZoomSpeed = 1;
+    }
 
     void Update()
     {
@@ -31,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z; //Transform makes movement coordinates local and not global.
 
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * speed * Time.deltaTime * cameraZoomSpeed);
 
         if (Input.GetButton("Jump") && isGrounded)
 		{
