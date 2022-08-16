@@ -14,7 +14,15 @@ public class CameraEffect : MonoBehaviour
 	
 	void Start ()
 	{
+		GhostCamera.onCamOff += () => m_Enable = false;
+		GhostCamera.onCamOn += () => m_Enable = true;
 		m_RT = new RenderTexture (Screen.width, Screen.height, 0);
+	}
+
+    private void OnDisable()
+    {
+		GhostCamera.onCamOff -= () => m_Enable = false;
+		GhostCamera.onCamOn -= () => m_Enable = true;
 	}
     void Update ()
 	{
@@ -42,4 +50,6 @@ public class CameraEffect : MonoBehaviour
 		int w = 320;
 		GUI.Box (new Rect (Screen.width / 2 - w / 2, 10, w, 25), "Thermal Vision Demo");
 	}
+
+
 }

@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: e0704e75786781d468882dbd032ebcdc, type: 2}
 --- !u!43 &6188056
 Mesh:
   m_ObjectHideFlags: 0
@@ -375,6 +375,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camOn: 0
+  zoomIn: 45
+  zoomOut: 60
+  zoomSpeed: 0.25
 --- !u!1 &396586833
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +391,8 @@ GameObject:
   - component: {fileID: 396586836}
   - component: {fileID: 396586835}
   - component: {fileID: 396586834}
+  - component: {fileID: 396586839}
+  - component: {fileID: 396586840}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -485,6 +490,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &396586839
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396586833}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5000001
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &396586840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396586833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad19c98d74c3d1c4c977b13e26ac2e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &923646536
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,7 +633,6 @@ GameObject:
   - component: {fileID: 1068264640}
   - component: {fileID: 1068264639}
   - component: {fileID: 1068264638}
-  - component: {fileID: 1068264637}
   m_Layer: 0
   m_Name: Thermal Camera
   m_TagString: MainCamera
@@ -602,7 +640,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1068264637
+--- !u!114 &1068264638
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -611,26 +649,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1068264636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fca8bc3a717b0914ca760e435dacf862, type: 3}
+  m_Script: {fileID: 11500000, guid: 3fed418f8b8e32147ad7016485e74de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MoveSpeed: 2
-  m_RotateSpeed: 0.01
-  m_ForwardButton: 119
-  m_BackwardButton: 115
-  m_RightButton: 100
-  m_LeftButton: 97
-  m_UpButton: 101
-  m_DownButton: 113
---- !u!45 &1068264638
-Skybox:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1068264636}
-  m_Enabled: 1
-  m_CustomSkybox: {fileID: 2100000, guid: 5ba172cd3918d7c44aa6d04446119a00, type: 2}
+  mouseSensitivity: 500
+  playerBody: {fileID: 20822369}
 --- !u!114 &1068264639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,7 +667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Mat: {fileID: 2100000, guid: 044d601d51494904dbd8bf2777e533aa, type: 2}
-  m_Enable: 1
+  m_Enable: 0
   m_ThermalHigh: 0.3
   m_BlurAmount: 0.1
   m_DimensionsX: 1
@@ -733,14 +756,13 @@ GameObject:
   - component: {fileID: 1299226654}
   - component: {fileID: 1299226653}
   - component: {fileID: 1299226652}
-  - component: {fileID: 1299226655}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1299226652
 AudioListener:
   m_ObjectHideFlags: 0
@@ -806,20 +828,6 @@ Transform:
   m_Father: {fileID: 20822369}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1299226655
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1299226651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fed418f8b8e32147ad7016485e74de1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mouseSensitivity: 500
-  playerBody: {fileID: 20822369}
 --- !u!1 &1742047334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,7 +3008,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!65 &2022641346
 BoxCollider:
