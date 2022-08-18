@@ -778,7 +778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Mat: {fileID: 2100000, guid: 044d601d51494904dbd8bf2777e533aa, type: 2}
   m_Enable: 0
-  m_ThermalHigh: 0.3
+  m_ThermalHigh: 0.42
   m_BlurAmount: 0.1
   m_DimensionsX: 1
   m_DimensionsY: 1
