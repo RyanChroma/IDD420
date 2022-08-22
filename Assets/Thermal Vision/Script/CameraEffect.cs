@@ -16,6 +16,19 @@ public class CameraEffect : MonoBehaviour
 	{
 		m_RT = new RenderTexture (Screen.width, Screen.height, 0);
 	}
+
+    private void OnEnable()
+    {
+		GhostCamera.onCamOn += () => m_Enable = true;
+		GhostCamera.onCamOff += () => m_Enable = false;
+	}
+
+    private void OnDisable()
+    {
+		GhostCamera.onCamOn -= () => m_Enable = true;
+		GhostCamera.onCamOff -= () => m_Enable = false;
+	}
+
     void Update ()
 	{
 		float x = Random.Range (0f, 1f);
