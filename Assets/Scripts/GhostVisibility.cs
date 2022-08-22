@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GhostVisibility : MonoBehaviour
 {
-    [SerializeField]private MeshRenderer renderer;
+    [SerializeField] private MeshRenderer renderer;
     void Start()
     {
         renderer = GetComponent<MeshRenderer>();
@@ -20,7 +20,7 @@ public class GhostVisibility : MonoBehaviour
 
     public void Invisible()
     {
-        renderer.material.color = new Color32(0,0,0,0);
+        renderer.material.color = new Color32(0, 0, 0, 0);
     }
 
     public void Visible()

@@ -16,11 +16,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float cameraZoomSpeed;
     private float _camZoomSpeed;
 
+    public Camera mainCamera;
+    public Camera thermalCamera;
+
     Vector3 velocity;
     bool isGrounded;
 
     private void Start()
     {
+        mainCamera.enabled = true;
+        thermalCamera.enabled = false;
+
         _camZoomSpeed = cameraZoomSpeed;
         cameraZoomSpeed = 1;
         GhostCamera.onCamOn += () => cameraZoomSpeed = _camZoomSpeed;
@@ -37,10 +43,10 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
-		{
+        if (isGrounded && velocity.y < 0)
+        {
             velocity.y = -2f;
-		}
+        }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
@@ -50,12 +56,23 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime * cameraZoomSpeed);
 
         if (Input.GetButton("Jump") && isGrounded)
-		{
+        {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-		}
+        }
 
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        if (Input.GetMouseButtonDown(1)) //GetMouseButtonDown(1) means holding down right click.
+        {
+            mainCamera.enabled = !mainCamera.enabled;
+            thermalCamera.enabled = !thermalCamera.enabled;
+        }
+        else if (Input.GetMouseButtonUp(1)) //This is letting go of right click.
+        {
+            mainCamera.enabled = !mainCamera.enabled;
+            thermalCamera.enabled = !thermalCamera.enabled;
+        }
     }
 }
