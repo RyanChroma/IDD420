@@ -29,14 +29,14 @@ public class PlayerMovement : MonoBehaviour
 
         _camZoomSpeed = cameraZoomSpeed;
         cameraZoomSpeed = 1;
-        GhostCamera.onCamOn += () => cameraZoomSpeed = _camZoomSpeed;
-        GhostCamera.onCamOff += () => cameraZoomSpeed = 1;
+        CameraToggle.onCamOn += () => cameraZoomSpeed = _camZoomSpeed;
+        CameraToggle.onCamOff += () => cameraZoomSpeed = 1;
     }
 
     private void OnDisable()
     {
-        GhostCamera.onCamOn -= () => cameraZoomSpeed = _camZoomSpeed;
-        GhostCamera.onCamOff -= () => cameraZoomSpeed = 1;
+        CameraToggle.onCamOn -= () => cameraZoomSpeed = _camZoomSpeed;
+        CameraToggle.onCamOff -= () => cameraZoomSpeed = 1;
     }
 
     void Update()

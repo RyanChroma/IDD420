@@ -8,14 +8,14 @@ public class GhostVisibility : MonoBehaviour
     void Start()
     {
         renderer = GetComponent<MeshRenderer>();
-        GhostCamera.onCamOn += Visible;
-        GhostCamera.onCamOff += Invisible;
+        CameraToggle.onCamOn += Visible;
+        CameraToggle.onCamOff += Invisible;
     }
 
     private void OnDisable()
     {
-        GhostCamera.onCamOn -= Visible;
-        GhostCamera.onCamOff -= Invisible;
+        CameraToggle.onCamOn -= Visible;
+        CameraToggle.onCamOff -= Invisible;
     }
 
     public void Invisible()

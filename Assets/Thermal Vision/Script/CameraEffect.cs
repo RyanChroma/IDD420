@@ -19,14 +19,14 @@ public class CameraEffect : MonoBehaviour
 
     private void OnEnable()
     {
-		GhostCamera.onCamOn += () => m_Enable = true;
-		GhostCamera.onCamOff += () => m_Enable = false;
+		CameraToggle.onCamOn += () => m_Enable = true;
+		CameraToggle.onCamOff += () => m_Enable = false;
 	}
 
     private void OnDisable()
     {
-		GhostCamera.onCamOn -= () => m_Enable = true;
-		GhostCamera.onCamOff -= () => m_Enable = false;
+		CameraToggle.onCamOn -= () => m_Enable = true;
+		CameraToggle.onCamOff -= () => m_Enable = false;
 	}
 
     void Update ()
