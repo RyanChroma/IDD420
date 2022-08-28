@@ -20,6 +20,7 @@ public class CameraLife : MonoBehaviour
             currentLife -= drainRate * Time.deltaTime;
         }
 
+        //check for one time invoke;
         if (!lifeOut && currentLife <= 0)
         {
             onLifeOut?.Invoke();
@@ -31,5 +32,12 @@ public class CameraLife : MonoBehaviour
         {
             lifeOut = false;
         }
+        //
+    }
+
+    public void addLife(float lifeAmount)
+    {
+        currentLife += lifeAmount;
+        currentLife = Mathf.Clamp(currentLife,0,maxLife);
     }
 }
