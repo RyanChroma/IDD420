@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
-        m_Texture: {fileID: 2800000, guid: 0b20d0ae77e7c184b8abe949f9e89fed, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -36,7 +36,7 @@ Material:
     - _BlurAmount: 0.1
     - _DepthModulator: 0.559
     - _Gap: 0.1
-    - _HotLight: 0.5
+    - _HotLight: 0.8
     - _Param1: 7.04
     - _Param2: 1.889
     - _Param3: 0.0933
@@ -47,5 +47,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Dimensions: {r: 1, g: 1, b: 0, a: 0}
     - _RandomFractions: {r: 0.78637993, g: 0.74210846, b: 0, a: 0}
-    - _Rnd: {r: 0.54735047, g: 0.40125614, b: 0, a: 0}
+    - _Rnd: {r: 0.27411336, g: 0.9582515, b: 0, a: 0}
   m_BuildTextureStacks: []
