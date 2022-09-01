@@ -303,6 +303,7 @@ GameObject:
   - component: {fileID: 20822375}
   - component: {fileID: 20822374}
   - component: {fileID: 20822376}
+  - component: {fileID: 20822377}
   m_Layer: 6
   m_Name: First Person Player
   m_TagString: Player
@@ -421,8 +422,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad86c352d1c430c41b636d74ec1cc435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flimCount: 3
-  maxFlim: 3
+  flimCount: 10
+  maxFlim: 10
 --- !u!114 &20822376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -435,6 +436,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ee066b8b6eaf9439cb136ea340494f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 3
+--- !u!114 &20822377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 20822368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb8d1843ce8f42b4ba524ea4294d01f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  onDeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 20822370}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 425771799}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &46678257
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +892,7 @@ GameObject:
   - component: {fileID: 396586834}
   - component: {fileID: 396586840}
   - component: {fileID: 396586841}
+  - component: {fileID: 396586842}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -999,6 +1042,34 @@ MonoBehaviour:
   - {fileID: 919029308}
   - {fileID: 1182260091}
   - {fileID: 46678258}
+--- !u!114 &396586842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396586833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb8d1843ce8f42b4ba524ea4294d01f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  onDeathEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 396586833}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &425771791
 GameObject:
   m_ObjectHideFlags: 0

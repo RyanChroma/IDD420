@@ -8,11 +8,16 @@ public class CameraShot : MonoBehaviour
     public static Action onCamShot;
     private CameraAmmo cameraAmmo;
     private CameraToggle cameraToggle;
+    [SerializeField] private float damage;
+
+    private Camera cam;
 
     private void Start()
     {
         cameraAmmo = GetComponent<CameraAmmo>();
         cameraToggle = GetComponent<CameraToggle>();
+
+        cam = Camera.main;
     }
 
     void Update()
@@ -23,6 +28,18 @@ public class CameraShot : MonoBehaviour
         {
             onCamShot?.Invoke();
             cameraAmmo.DecreaseAmmo(1);
+
+            RaycastHit hit;
+            if(Physics.Raycast(cam.transform.position,cam.transform.forward,out hit,Mathf.Infinity))
+            {
+                if(hit.transform.TryGetComponent(out Health health))
+                {
+                    health.DoDamage(damage);
+                    print("RayDamage");
+                }
+
+                print("RayHit");
+            }
             print("CamShot");
                 
         }
