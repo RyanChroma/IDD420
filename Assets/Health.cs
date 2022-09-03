@@ -8,13 +8,6 @@ public class Health : MonoBehaviour
     [SerializeField] float health;
     [SerializeField] private UnityEvent onDeathEvent;
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            DoDamage(4);
-        }
-    }
 
     public void DoDamage(float _damage)
     {
