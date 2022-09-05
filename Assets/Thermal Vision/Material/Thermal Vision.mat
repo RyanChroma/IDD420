@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _HeatLookupTex:
-        m_Texture: {fileID: 2800000, guid: 7fa555ee9bd48f6418c0acb0c9e60c85, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0b20d0ae77e7c184b8abe949f9e89fed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -47,5 +47,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Dimensions: {r: 1, g: 1, b: 0, a: 0}
     - _RandomFractions: {r: 0.78637993, g: 0.74210846, b: 0, a: 0}
-    - _Rnd: {r: 0.5515334, g: 0.10563803, b: 0, a: 0}
+    - _Rnd: {r: 0.4089076, g: 0.87273335, b: 0, a: 0}
   m_BuildTextureStacks: []

@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 2022641348}
   - component: {fileID: 2022641347}
   - component: {fileID: 2022641346}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,6 +1128,14 @@ PrefabInstance:
     - target: {fileID: 55881740970217513, guid: eb5cc3ec13dcb944a9d738115e906abe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 55881740970217515, guid: eb5cc3ec13dcb944a9d738115e906abe, type: 3}
+      propertyPath: groundDistance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 55881740970217515, guid: eb5cc3ec13dcb944a9d738115e906abe, type: 3}
+      propertyPath: groundMask.m_Bits
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb5cc3ec13dcb944a9d738115e906abe, type: 3}
