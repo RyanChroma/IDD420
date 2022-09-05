@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1929560106
 Transform:
   m_ObjectHideFlags: 0
@@ -250,6 +250,7 @@ GameObject:
   - component: {fileID: 55881740970217505}
   - component: {fileID: 55881740970217506}
   - component: {fileID: 55881740970217507}
+  - component: {fileID: 106689425}
   m_Layer: 6
   m_Name: First Person Player
   m_TagString: Player
@@ -459,6 +460,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5acea377b4ff01540b5d00fb7731fd91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &106689425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55881740970217512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e535696a4e797447830d67ddcaff89d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLight: {fileID: 1929560107}
 --- !u!1 &55881741111290284
 GameObject:
   m_ObjectHideFlags: 0
