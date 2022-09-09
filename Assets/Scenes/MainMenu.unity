@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 33793240}
   - component: {fileID: 33793239}
   m_Layer: 5
-  m_Name: How to play
+  m_Name: Credits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: HOW TO PLAY
+  m_Text: C R E D I T S
 --- !u!222 &194093127
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 806441905}
   - component: {fileID: 806441904}
   m_Layer: 5
-  m_Name: Credit
+  m_Name: Credits Simple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -650,8 +650,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -692, y: -435.21}
-  m_SizeDelta: {x: 467.6462, y: 209.5809}
+  m_AnchoredPosition: {x: -677.07, y: -435.21}
+  m_SizeDelta: {x: 565.8519, y: 209.5809}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &806441904
 MonoBehaviour:
@@ -686,9 +686,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "CREDITS:\nDEVELOPER: RYAN CUA\nINSTRUCTOR: PAKPOOM THONSARI\nSUBJECT:
-    IDD420\n\xA92022 THAMMASAT UNIVERSITY\nSFX FROM: freesound.org\nBGM: Fatal Frame
-    5 OST - Title"
+  m_Text: "MAIN CREDITS:\nDEVELOPER: RYAN CUA\nINSTRUCTOR: PAKPOOM THONSARI\nSUBJECT:
+    IDD420\n\xA92022 THAMMASAT UNIVERSITY\nSFX FROM: freesound.org (More in C R E
+    D I T S)\nBGM: Fatal Frame 5 OST - Title"
 --- !u!222 &806441905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1233,7 +1233,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level1
+          m_StringArgument: HowToPlay
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1512840880

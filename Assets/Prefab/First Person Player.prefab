@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ee066b8b6eaf9439cb136ea340494f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 1
 --- !u!114 &55881740970217505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8d1843ce8f42b4ba524ea4294d01f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <health>k__BackingField: 10
+  <health>k__BackingField: 100
   onDeathEvent:
     m_PersistentCalls:
       m_Calls:

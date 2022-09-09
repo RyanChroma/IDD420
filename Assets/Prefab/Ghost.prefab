@@ -432,8 +432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f347f0554d016c5468aaab46922c4e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 5
-  damage: 5
+  attackRange: 2
+  damage: 1
   attackCooldown: 2
 --- !u!114 &3373961887247463064
 MonoBehaviour:
@@ -466,7 +466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8554966160836781399
 Transform:
   m_ObjectHideFlags: 0
