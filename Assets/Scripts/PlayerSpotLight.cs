@@ -7,11 +7,6 @@ public class PlayerSpotLight : MonoBehaviour
     [SerializeField] private Light playerLight;
     private bool isOn;
 
-    private void Start()
-    {
-        
-    }
-
     private void OnEnable()
     {
         CameraToggle.onCamOn += toggleLight;
@@ -19,8 +14,8 @@ public class PlayerSpotLight : MonoBehaviour
     }
     private void OnDisable()
     {
-        CameraToggle.onCamOn += toggleLight;
-        CameraToggle.onCamOff += toggleLight;
+        CameraToggle.onCamOn -= toggleLight;
+        CameraToggle.onCamOff -= toggleLight;
     }
 
     public void toggleLight()

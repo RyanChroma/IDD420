@@ -27,6 +27,7 @@ public class CameraShot : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             onCamShot?.Invoke();
+            AudioManager.instance.Play("CamLeftClick");
             cameraAmmo.DecreaseAmmo(1);
 
             RaycastHit hit;
@@ -35,6 +36,7 @@ public class CameraShot : MonoBehaviour
                 if(hit.transform.TryGetComponent(out Health health))
                 {
                     health.DoDamage(damage);
+                    AudioManager.instance.Play("ConfirmHit");
                     print("RayDamage");
                 }
 

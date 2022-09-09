@@ -10,24 +10,30 @@ public class CameraToggle : MonoBehaviour
     public static Action onCamOff;
     public bool camOn { get; private set; }
     private CameraLife cameraLife => GetComponent<CameraLife>();
+    private bool toggleable = true;
 
     private void Start()
     {
-        CameraLife.onLifeOut += () => { onCamOff?.Invoke();camOn = false; };
+        CameraLife.onLifeOut += turnOffCam;
+        WinBox.onWin -= () => SetToggleable(true);
     }
 
     private void OnDisable()
     {
-        CameraLife.onLifeOut -= () => { onCamOff?.Invoke(); camOn = false; };
+        CameraLife.onLifeOut -= turnOffCam;
+        WinBox.onWin -= ()=> SetToggleable(false);
     }
 
     void Update()
-    {  
+    {
+        if (!toggleable) return;
+
         if (Input.GetMouseButtonUp(1)) //This is letting go of right click.
         {
-            onCamOff?.Invoke();
-            camOn = false;
+            turnOffCam();
             print("CamOff");
+
+
         }
 
         if (cameraLife.currentLife <= 0) 
@@ -39,9 +45,22 @@ public class CameraToggle : MonoBehaviour
         {
             onCamOn?.Invoke();
             camOn = true;
+            AudioManager.instance.Play("CamRightClick");
             print("CamOn");
 
         }
   
     }
+
+    public void turnOffCam()
+    {
+        onCamOff?.Invoke();
+        camOn = false;
+    }
+
+    public void SetToggleable(bool _toggleable)
+    {
+        toggleable = _toggleable;
+    }
+
 }

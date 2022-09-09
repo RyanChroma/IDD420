@@ -8,7 +8,17 @@ public class MouseLook : MonoBehaviour
     public Transform playerBody;
 
     float xRotation = 0f;
-    
+
+    private void OnEnable()
+    {
+        WinBox.onWin += enableMouseLook;
+    }
+
+    private void OnDisable()
+    {
+        WinBox.onWin -= enableMouseLook;
+    }
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; //Make mouse disappear when you start the game.
@@ -24,5 +34,11 @@ public class MouseLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f); //Quaternion is responsible for rotation.
         playerBody.Rotate(Vector3.up * mouseX);
+    }
+
+    public void enableMouseLook()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        this.enabled = false;
     }
 }

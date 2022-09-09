@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 55881740970217506}
   - component: {fileID: 55881740970217507}
   - component: {fileID: 106689425}
+  - component: {fileID: 2064362608}
   m_Layer: 6
   m_Name: First Person Player
   m_TagString: Player
@@ -396,7 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8d1843ce8f42b4ba524ea4294d01f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  <health>k__BackingField: 10
   onDeathEvent:
     m_PersistentCalls:
       m_Calls:
@@ -428,6 +429,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: DeathCall, Assembly-CSharp
         m_MethodName: Dead
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 55881740970217516}
+        m_TargetAssemblyTypeName: CameraToggle, Assembly-CSharp
+        m_MethodName: SetToggleable
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -473,6 +486,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerLight: {fileID: 1929560107}
+--- !u!114 &2064362608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55881740970217512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c913f931d5adedc46be52d0d44c065ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camModel: {fileID: 4261588349676113156}
 --- !u!1 &55881741111290284
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ba9991dc4cf13242ac680bb7568cdda, type: 3}
+--- !u!1 &4261588349676113156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9ba9991dc4cf13242ac680bb7568cdda, type: 3}
+  m_PrefabInstance: {fileID: 4027728622259171413}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3490259658987476926 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9ba9991dc4cf13242ac680bb7568cdda, type: 3}
