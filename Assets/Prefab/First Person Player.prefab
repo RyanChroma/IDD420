@@ -154,7 +154,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fed418f8b8e32147ad7016485e74de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 500
+  mouseSensitivity: 200
   playerBody: {fileID: 55881740970217513}
 --- !u!114 &55881740830943833
 MonoBehaviour:
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flimCount: 10
-  maxFlim: 10
+  maxFlim: 20
 --- !u!114 &55881740970217518
 MonoBehaviour:
   m_ObjectHideFlags: 0

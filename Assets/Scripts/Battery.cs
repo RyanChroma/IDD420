@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Battery : Item
 {
-    [SerializeField] private int amount;
+    [SerializeField] private float lifeAmount;
     public override void onPickUP()
     {
-        player.GetComponent<CameraAmmo>().IncreaseAmmo(amount);
+        player.GetComponent<CameraLife>().addLife(lifeAmount);
     }
 }
