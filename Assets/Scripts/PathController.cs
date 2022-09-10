@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Linq;
 
 public class PathController : MonoBehaviour
 {
@@ -9,20 +10,24 @@ public class PathController : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private int wayPointIndex;
     private bool playerDetect;
+    private Detector detector => GetComponent<Detector>();
 
     private void OnEnable()
     {
-        Detector.onDetect +=  ()=> playerDetect = true;
+        detector.onDetect +=  ()=> playerDetect = true;
     }
 
     private void OnDisable()
     {
-        Detector.onDetect -= () => playerDetect = true;
+        detector.onDetect -= () => playerDetect = true;
     }
 
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+
+        if (!wayPoint.All(a => a != null)) return;
+        if (wayPoint.Count == 0) return;
 
         navMeshAgent.destination = wayPoint[0].position;
     }
@@ -35,7 +40,10 @@ public class PathController : MonoBehaviour
             return;
         }
 
-        if(navMeshAgent.remainingDistance <= 0.5f)
+        if (!wayPoint.All(a => a != null)) return;
+        if (wayPoint.Count <= 0) return;
+
+        if (navMeshAgent.remainingDistance <= 0.5f)
         {
             wayPointIndex++;
 

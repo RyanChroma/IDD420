@@ -5,7 +5,7 @@ using System;
 
 public class Detector : MonoBehaviour
 {
-    public static Action onDetect;
+    public Action onDetect;
     private GameObject player => GameObject.FindGameObjectWithTag("Player");
     private AudioPlayer audioPlayer;
     [SerializeField]private float detectRange;
