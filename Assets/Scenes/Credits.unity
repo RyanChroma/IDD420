@@ -304,7 +304,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -679,7 +679,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -911,8 +911,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030517, y: -0.000022888}
-  m_SizeDelta: {x: 906.1982, y: 643.3018}
+  m_AnchoredPosition: {x: -0.000030517, y: -2.6375}
+  m_SizeDelta: {x: 906.1982, y: 767.3824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1434778143
 MonoBehaviour:
@@ -947,15 +947,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "All sound effets are from freesound.org\n\r\nGhost Detected: https://freesound.org/people/HorrorAudio/sounds/431979/\r\nGhost
+  m_Text: "This game is for educational purposes only. I do not make profit from
+    this game.\n\nAll sound effects are from freesound.org\n\r\nGhost Detected: https://freesound.org/people/HorrorAudio/sounds/431979/\r\nGhost
     Alert: https://freesound.org/people/carmsie/sounds/167432/\r\nCamera: https://freesound.org/people/uEffects/sounds/207865/\r\nFootsteps:
-    https://freesound.org/people/florianreichelt/sounds/459964/\r\nConfirm Hit: https://freesound.org/people/Syna-Max/sounds/54985/\r\n\r\nAll
-    Imported models are from sketchfab.com\r\n\r\nBed: \rOld Style Hospital Bed by
-    Connor Wasall\nCamera: \rCanon AT-1 Retro Camera by AleixoAlonso\nChair: \rWooden
-    Chair by Zian\nDoor: \rWooden Door by Nicholas Record\nGhost:\r Cloth Ghost by
-    ANDRE\nLong Light: \rFluorescent Lamp by brodys_arts\nOld Desk: \rOld Desk by
-    Thunder\nShower: \rShower by Aterallis\nSink: \rOld Dirty Sink - Low Poly by
-    W0nnaFight\nToilet: Toilet by SushiKev3d"
+    https://freesound.org/people/florianreichelt/sounds/459964/\r\n\r\nAll Imported
+    models are from sketchfab.com\r\n\r\nBed: \rOld Style Hospital Bed by Connor
+    Wasall\nCamera: \rCanon AT-1 Retro Camera by AleixoAlonso\nChair: \rWooden Chair
+    by Zian\nDoor: \rWooden Door by Nicholas Record\nGhost:\r Cloth Ghost by ANDRE\nLong
+    Light: \rFluorescent Lamp by brodys_arts\nOld Desk: \rOld Desk by Thunder\nShower:
+    \rShower by Aterallis\nSink: \rOld Dirty Sink - Low Poly by W0nnaFight\nToilet:
+    Toilet by SushiKev3d\n\nWall texture from textures.com\n\xA92022 Thammasat University"
 --- !u!222 &1434778144
 CanvasRenderer:
   m_ObjectHideFlags: 0

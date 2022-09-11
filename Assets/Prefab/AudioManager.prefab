@@ -44,15 +44,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: MainTheme
-    audioClip: {fileID: 8300000, guid: f03127908676f66448616914e1b0001a, type: 3}
-    volume: 0.396
+  - name: 
+    audioClip: {fileID: 0}
+    volume: 0
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: CamRightClick
     audioClip: {fileID: 8300000, guid: 68c290eea9f0b844c8070bde0b3ed53a, type: 3}
-    volume: 0.396
+    volume: 0.5
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -62,15 +62,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: ConfirmHit
-    audioClip: {fileID: 8300000, guid: f401147ddea37c24a8ac9a1dde6ea921, type: 3}
-    volume: 0.396
+  - name: 
+    audioClip: {fileID: 0}
+    volume: 0
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Walk
     audioClip: {fileID: 8300000, guid: 27ca817f9047900419ad7463c43b2a34, type: 3}
-    volume: 0.396
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
