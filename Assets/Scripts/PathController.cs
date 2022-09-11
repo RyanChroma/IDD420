@@ -26,7 +26,11 @@ public class PathController : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
 
-        if (!wayPoint.All(a => a != null)) return;
+        for(int i = 0; i < wayPoint.Count; i++)
+        {
+            if (wayPoint[i] == null) wayPoint.Remove(wayPoint[i]);
+        }
+
         if (wayPoint.Count == 0) return;
 
         navMeshAgent.destination = wayPoint[0].position;
@@ -39,8 +43,6 @@ public class PathController : MonoBehaviour
             navMeshAgent.destination = GameObject.FindGameObjectWithTag("Player").transform.position;
             return;
         }
-
-        if (!wayPoint.All(a => a != null)) return;
         if (wayPoint.Count <= 0) return;
 
         if (navMeshAgent.remainingDistance <= 0.5f)
