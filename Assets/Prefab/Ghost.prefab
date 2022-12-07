@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRange: 2
-  damage: 1
+  damage: 1.5
   attackCooldown: 2
 --- !u!114 &3373961887247463064
 MonoBehaviour:

@@ -956,7 +956,8 @@ MonoBehaviour:
     by Zian\nDoor: \rWooden Door by Nicholas Record\nGhost:\r Cloth Ghost by ANDRE\nLong
     Light: \rFluorescent Lamp by brodys_arts\nOld Desk: \rOld Desk by Thunder\nShower:
     \rShower by Aterallis\nSink: \rOld Dirty Sink - Low Poly by W0nnaFight\nToilet:
-    Toilet by SushiKev3d\n\nWall texture from textures.com\n\xA92022 Thammasat University"
+    Toilet by SushiKev3d\n\nCoding helped from CapBearz\n\nWall texture from textures.com\n\xA92022
+    Thammasat University"
 --- !u!222 &1434778144
 CanvasRenderer:
   m_ObjectHideFlags: 0
